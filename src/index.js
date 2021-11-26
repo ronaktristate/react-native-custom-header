@@ -2,4 +2,4 @@
 //   return Promise.resolve(a * b);
 // }
 import HeaderComponent from "./HeaderComponent"
-export default HeaderComponent;
+export default HeaderComponent

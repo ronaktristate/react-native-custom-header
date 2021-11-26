@@ -37,11 +37,10 @@ class HeaderComponent extends Component {
                         <TouchableOpacity
                            onPress={() => {
                               if (onBackButtonPress) onBackButtonPress();
-                              else NavigationService.goBack();
                            }}
                            delayPressIn={0}
                         >
-                           <Text>{"Back"}</Text>
+                           <Image source={require("./assets/back-icon.png")} />
                         </TouchableOpacity>
                      </View>
                      :
