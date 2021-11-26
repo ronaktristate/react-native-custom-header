@@ -8,20 +8,24 @@ Custom Header Component
 npm install react-native-header-custom-header
 ```
 
+or
+
+```sh
+yarn add react-native-header-custom-header
+```
+
 ## Usage
 
 ```js
-import { multiply } from "react-native-header-custom-header";
+import HeaderComponent from "react-native-header-custom-header";
 
-// ...
-
-const result = await multiply(3, 7);
+render(){
+     <HeaderComponent
+       backButton
+       middleText={'Home Screen'}
+     />
+}
 ```
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
 ## License
 
 MIT

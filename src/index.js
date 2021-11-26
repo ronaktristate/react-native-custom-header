@@ -1,5 +1,4 @@
-// export function multiply(a: number, b: number): Promise<number> {
-//   return Promise.resolve(a * b);
-// }
 import HeaderComponent from "./HeaderComponent"
+
+/**Exported Header Component */
 export default HeaderComponent

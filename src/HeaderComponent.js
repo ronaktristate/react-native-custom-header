@@ -3,7 +3,7 @@ import { Text, View, StatusBar, StyleSheet, TouchableOpacity, Image, Platform, K
 import { getStatusBarHeight } from './iPhoneXHelper';
 import PropTypes from 'prop-types';
 
-// /**custom header componet */
+/**Custom Header Component */
 class HeaderComponent extends Component {
    constructor(props) {
       super(props);
@@ -11,6 +11,7 @@ class HeaderComponent extends Component {
       };
    }
 
+   /**component render method */
    render() {
       const {
          backButton,
@@ -35,9 +36,7 @@ class HeaderComponent extends Component {
                         style={[styles.backButton]}
                      >
                         <TouchableOpacity
-                           onPress={() => {
-                              if (onBackButtonPress) onBackButtonPress();
-                           }}
+                           onPress={() => { if (onBackButtonPress) onBackButtonPress(); }}
                            delayPressIn={0}
                         >
                            <Image source={require("./assets/back-icon.png")} />
@@ -84,7 +83,7 @@ class HeaderComponent extends Component {
    }
 }
 
-
+/**Header Component Prop types */
 HeaderComponent.propTypes = {
    backButton: PropTypes.bool,
    onBackButtonPress: PropTypes.func,
@@ -99,6 +98,7 @@ HeaderComponent.propTypes = {
    rightImageStyle: PropTypes.any
 }
 
+/**Header Component default prop types */
 HeaderComponent.defaultProps = {
    backButton: false,
    middleText: "Home",
