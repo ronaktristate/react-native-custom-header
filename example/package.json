@@ -1,6 +1,6 @@
 {
-  "name": "react-native-custom-header-example",
-  "description": "Example app for react-native-custom-header",
+  "name": "react-native-header-custom-header-example",
+  "description": "Example app for react-native-header-custom-header",
   "version": "0.0.1",
   "private": true,
   "scripts": {

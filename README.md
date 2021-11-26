@@ -1,17 +1,17 @@
-# react-native-custom-header
+# react-native-header-custom-header
 
 Custom Header Component
 
 ## Installation
 
 ```sh
-npm install react-native-custom-header
+npm install react-native-header-custom-header
 ```
 
 ## Usage
 
 ```js
-import { multiply } from "react-native-custom-header";
+import { multiply } from "react-native-header-custom-header";
 
 // ...
 
