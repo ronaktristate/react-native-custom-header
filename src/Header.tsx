@@ -6,21 +6,16 @@ export type Props = {
    backButton: boolean,
    rightIcon: boolean,
    showSearchBar: boolean,
-
    onBackButtonPress: any,
    leftIconPress: any,
-
    rightImage: any,
    onPressRightIcon: any,
    onChangeText: any,
    onPressSearchCross: any,
-
    middleText: string,
    searchValue: string,
-
    leftIcon: ImageProps,
    backButtonSource: ImageProps,
-
    mainStyle: StyleProp<ViewStyle>,
    middleTextStyle: StyleProp<TextStyle>,
    rightImageStyle: StyleProp<ImageStyle>,
@@ -29,7 +24,6 @@ export type Props = {
    firstViewCustomstyle: StyleProp<ViewStyle>,
    middleViewCustomstyle: StyleProp<ViewStyle>,
    lastViewCustomstyle: StyleProp<ViewStyle>,
-
 };
 
 const Header: React.FC<Props> = ({
@@ -56,7 +50,7 @@ const Header: React.FC<Props> = ({
    lastViewCustomstyle,
 }) => {
    return (
-      <View style={[styles.container, mainStyle]} >
+      <View style={[styles.container, mainStyle]}>
          {
             showSearchBar ?
                <View style={[styles.middleSearch, searchBarWrapStyle]}>
@@ -101,8 +95,7 @@ const Header: React.FC<Props> = ({
                               null
                      }
                   </View>
-                  <View
-                     style={[styles.middleView, middleViewCustomstyle]}>
+                  <View style={[styles.middleView, middleViewCustomstyle]}>
                      {middleText ?
                         <Text numberOfLines={1} style={[styles.middleTextStyle, middleTextStyle, {}]}> {middleText}</Text>
                         :
@@ -127,7 +120,6 @@ const Header: React.FC<Props> = ({
 }
 
 export default Header;
-
 
 /**component styling */
 const styles = StyleSheet.create({
@@ -176,4 +168,3 @@ const styles = StyleSheet.create({
       flex: 1,
    }
 })
-

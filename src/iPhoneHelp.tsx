@@ -12,7 +12,11 @@ export function isIphoneX() {
    );
 }
 
-/** cheking iphone x or notch device */
+/**
+ * @param iphoneXStyle 
+ * @param regularStyle 
+ * cheking iphone x or notch device
+ */
 export function ifIphoneX(iphoneXStyle: any, regularStyle: any) {
    if (isIphoneX()) {
       return iphoneXStyle;
@@ -20,7 +24,11 @@ export function ifIphoneX(iphoneXStyle: any, regularStyle: any) {
    return regularStyle;
 }
 
-/** getting status bar height */
+/**
+ * 
+ * @param safe 
+ * getting status bar height
+ */
 export function getStatusBarHeight(safe: boolean) {
    return Platform.select({
       ios: ifIphoneX(safe ? 44 : 30, 20),
@@ -46,4 +54,3 @@ export function getBottomMoreSpace(value: any) {
       return isIphoneX() ? 34 : value;
    }
 }
-
