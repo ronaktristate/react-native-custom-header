@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Text, View, StatusBar, StyleSheet, TouchableOpacity, Image, Platform, Keyboard, ImageBackground } from 'react-native';
 import { getStatusBarHeight } from './iPhoneXHelper';
 import PropTypes from 'prop-types';
-
+import Header from './Header';
 /**Custom Header Component */
 class HeaderComponent extends Component {
    constructor(props) {
