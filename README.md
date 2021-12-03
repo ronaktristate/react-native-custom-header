@@ -29,9 +29,9 @@ render(){
 
 ## New Features
 1. Header
- 1.1 . Search 
+  1.1 . Search 
   1.2. RightSide Button
-1.3. LeftSide Button
+  1.3. LeftSide Button
 
 2. CustomButton
     2.1 . Custom styles
@@ -46,8 +46,9 @@ render(){
 
 5. Scalable Functions
 
-### Configuration
-##### Select:
+6. Custom Loader
+
+### Header Configuration
 
 | Property | Type |  
 |---------------|----------|
