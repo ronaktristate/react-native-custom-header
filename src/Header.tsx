@@ -159,12 +159,13 @@ const styles = StyleSheet.create({
       justifyContent: "space-between",
       alignItems: "center",
       borderRadius: 10,
-      paddingVertical: 5,
+      paddingVertical: 0,
       height: 40,
    },
    searchtext: {
       color: 'black',
       fontSize: 14,
       flex: 1,
+      padding: 0,
    }
 })
