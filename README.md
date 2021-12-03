@@ -26,6 +26,42 @@ render(){
      />
 }
 ```
+
+## New Features
+
+1. Back Button
+2. Search 
+3. RightSide Button
+4. LeftSide Button
+
+### Configuration
+##### Select:
+
+| Property | Type |  
+|---------------|----------|
+| backButton | boolean | 
+| rightIcon | boolean |
+| showSearchBar | boolean | 
+| onBackButtonPress | function | 
+| leftIconPress | function | 
+| rightImage | Image source | 
+| onPressRightIcon | function | 
+| onChangeText | function | 
+| onPressSearchCross | function | 
+| middleText | string | 
+| searchValue | string | 
+| leftIcon | Image source | 
+| backButtonSource | Image source | 
+| mainStyle | style object | 
+| middleTextStyle | style object | 
+| rightImageStyle | style object | 
+| searchBarWrapStyle | style object | 
+| backButtonViewStyle | style object | 
+| firstViewCustomstyle | style object | 
+| middleViewCustomstyle | style object | 
+| lastViewCustomstyle | style object | 
+   
+
 ## License
 
 MIT
