@@ -28,11 +28,23 @@ render(){
 ```
 
 ## New Features
+1. Header
+ 1.1 . Search 
+  1.2. RightSide Button
+1.3. LeftSide Button
 
-1. Back Button
-2. Search 
-3. RightSide Button
-4. LeftSide Button
+2. CustomButton
+    2.1 . Custom styles
+    2.2 . button click 
+    
+3. CustomInputBox
+   3.1. Cusomt styles
+   3.2  Native InputText props
+   3.3  CountryCode 
+   
+4. Helper Functions
+
+5. Scalable Functions
 
 ### Configuration
 ##### Select:
