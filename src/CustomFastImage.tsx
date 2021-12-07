@@ -1,19 +1,20 @@
 import React, { } from 'react';
-import { View, StyleSheet, ViewStyle, StyleProp, ImageBackground, Image, ImageStyle, ImageResizeMode } from 'react-native'
-import FastImage, { ResizeMode } from 'react-native-fast-image';
+import { View, StyleSheet, ViewStyle, StyleProp, ImageBackground, Image, ImageStyle, ImageResizeMode, ImageSourcePropType } from 'react-native'
+import FastImage, { ResizeMode, Source } from 'react-native-fast-image';
 
 export type Props = {
    containerStyle: StyleProp<ViewStyle>,
-   source: any,
+   source: Source,
    resizeMode: ResizeMode,
    defaultImage: any,
    defaultImageResizeMode: ImageResizeMode,
    defaultImageStyle: StyleProp<ImageStyle>,
    imageStyle: StyleProp<ImageStyle>,
-   errorImage: any,
+   errorImage: Source,
    errorImageStyle: StyleProp<ImageStyle>,
    style: StyleProp<ImageStyle>,
    isBase64: boolean,
+   base64Source: ImageSourcePropType,
 }
 
 export type State = {
@@ -32,9 +33,8 @@ export default class CustomFastImage extends React.Component<Props, State>{
    }
 
    render() {
-      let { containerStyle } = this.props;
       return (
-         <View style={[styles.container, containerStyle]}>
+         <View style={[styles.container, this.props.containerStyle]}>
             {this.renderImageView()}
          </View>
       );
@@ -42,19 +42,11 @@ export default class CustomFastImage extends React.Component<Props, State>{
 
    renderImageView() {
       let { loadComplete, failToLoad } = this.state;
-      let {
-         source,
-         resizeMode,
-         defaultImage,
-         defaultImageResizeMode,
-         defaultImageStyle = {},
-         imageStyle = {},
-         errorImage,
-         errorImageStyle = {},
-         style = {}, // while style is set it will overright all image styles
+      let { source, resizeMode, defaultImage,
+         defaultImageResizeMode, defaultImageStyle = {}, imageStyle = {},
+         errorImage, errorImageStyle = {}, base64Source, style = {},
       } = this.props;
       if (failToLoad) {
-         // renders while image load failed
          return (
             <FastImage
                source={errorImage}
@@ -62,8 +54,8 @@ export default class CustomFastImage extends React.Component<Props, State>{
                style={style ? style : [styles.errorImageStyle, errorImageStyle]}
             />
          )
-      } else if (loadComplete) {
-         // after cache network image
+      }
+      else if (loadComplete) {
          return (
             <FastImage
                source={source}
@@ -71,8 +63,8 @@ export default class CustomFastImage extends React.Component<Props, State>{
                style={style ? style : [styles.imageStyle, imageStyle]}
             />
          )
-      } else {
-         // default image rendering
+      }
+      else {
          return (
             <ImageBackground
                source={defaultImage}
@@ -80,9 +72,8 @@ export default class CustomFastImage extends React.Component<Props, State>{
                resizeMode={defaultImageResizeMode || 'cover'}
             >
                {this.props.isBase64 &&
-
                   <Image
-                     source={source}
+                     source={base64Source}
                      resizeMode={resizeMode || 'cover'}
                      style={style ? style : [styles.imageStyle, imageStyle]}
                   />
@@ -93,7 +84,7 @@ export default class CustomFastImage extends React.Component<Props, State>{
                      onLoad={() => this.setState({ loadComplete: true })}
                      onLoadStart={() => this.setState({ loadComplete: false })}
                      resizeMode={resizeMode || 'cover'}
-                     style={{ height: 50, width: 50 }} // I know, Hack for load image! :)
+                     style={{ height: 50, width: 50 }}
                   />
                }
             </ImageBackground>

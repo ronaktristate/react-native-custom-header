@@ -48,6 +48,15 @@ render(){
 
 6. Custom Loader
 
+7. Custom Fast Image 
+
+
+#### IMPORTANT! You need to install [react-native-fast-image](https://github.com/DylanVann/react-native-fast-image).
+
+```sh
+"react-native-fast-image": "*"
+```
+
 ### Header Configuration
 
 | Property | Type |  
