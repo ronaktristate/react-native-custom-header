@@ -14,13 +14,15 @@ const CustomLoader: React.FC<Props> = ({
    containerStyle,
    activityIndicatorProps
 }) => {
+   let size = activityIndicatorProps && activityIndicatorProps.size ? activityIndicatorProps.size : 'large'
    return (
       <React.Fragment>
          {
             loading && <View style={[styles.container, containerStyle]}>
                <View style={styles.subView}>
                   <ActivityIndicator
-                     size={activityIndicatorProps.size || 'large'}
+                     size={size}
+                     // size={activityIndicatorProps.size || 'large'}
                      animating={true}
                      color={color || "white"}
                   />

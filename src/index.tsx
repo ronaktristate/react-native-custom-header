@@ -2,6 +2,7 @@ import CustomHeader from "./Header";
 import CustomButton from "./CustomButton";
 import CustomInputBox from "./InputField";
 import CustomLoader from "./CustomLoader";
+import CustomFastImage from "./CustomFastImage";
 
 import * as iPhoneHelp from "./iPhoneHelp";
 import * as HelperFunction from "./HelperFunction";
@@ -12,6 +13,8 @@ export {
    CustomButton,
    CustomInputBox,
    CustomLoader,
+
+   CustomFastImage,
 
    iPhoneHelp,
    HelperFunction,
